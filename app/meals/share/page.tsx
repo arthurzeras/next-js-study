@@ -1,7 +1,8 @@
 import classes from "./page.module.css";
+import { saveMealAction } from "@/lib/actions";
 import ImagePicker from "@/components/meals/image-picker";
 
-export default () => {
+export default function MealsSharePage() {
   return (
     <>
       <header className={classes.header}>
@@ -11,7 +12,7 @@ export default () => {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form}>
+        <form className={classes.form} action={saveMealAction}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -49,4 +50,4 @@ export default () => {
       </main>
     </>
   );
-};
+}

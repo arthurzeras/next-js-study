@@ -38,3 +38,6 @@ next-env.d.ts
 # database
 *.db
 *.db-*
+
+# uploads
+public/images/uploaded-*
