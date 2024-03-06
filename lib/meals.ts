@@ -4,6 +4,8 @@ import Database from "better-sqlite3";
 const db = Database("meals.db");
 
 export function getMeals() {
+  // throw new Error("Failed to get meals");
+
   return new Promise<IMeal[]>((resolve) => {
     setTimeout(() => {
       resolve(db.prepare("SELECT * FROM meals").all() as IMeal[]);

@@ -13,11 +13,13 @@ body {
   background: radial-gradient(#282c34, #282c34);
 }
 
+.error,
 .not-found {
   margin-top: 5rem;
   text-align: center;
 }
 
+.error h1,
 .not-found h1 {
   font-size: 5rem;
   margin: 0px;
@@ -32,6 +34,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.error p,
 .not-found p {
   font-size: 1.5rem;
   font-weight: 500;
