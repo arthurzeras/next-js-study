@@ -9,7 +9,10 @@ interface Props {
   href: string;
 }
 
-export default ({ href, children }: React.PropsWithChildren<Props>) => {
+export default function NavLink({
+  href,
+  children,
+}: React.PropsWithChildren<Props>) {
   const path = usePathname();
   let className = styles["nav-link"];
 
@@ -22,4 +25,4 @@ export default ({ href, children }: React.PropsWithChildren<Props>) => {
       {children}
     </Link>
   );
-};
+}

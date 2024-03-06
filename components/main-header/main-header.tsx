@@ -6,7 +6,7 @@ import imgLogo from "@/assets/logo.png";
 import styles from "./main-header.module.css";
 import MainHeaderBackground from "./main-header-background";
 
-export default () => {
+export default function MainHeader() {
   return (
     <>
       <MainHeaderBackground />
@@ -29,4 +29,4 @@ export default () => {
       </header>
     </>
   );
-};
+}

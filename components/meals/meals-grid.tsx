@@ -6,7 +6,7 @@ interface Props {
   meals: IMeal[];
 }
 
-export default ({ meals }: Props) => {
+export default function MealsGrid({ meals }: Props) {
   return (
     <ul className={styles.meals}>
       {meals.map((meal) => (
@@ -16,4 +16,4 @@ export default ({ meals }: Props) => {
       ))}
     </ul>
   );
-};
+}

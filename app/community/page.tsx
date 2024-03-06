@@ -5,7 +5,7 @@ import mealIcon from "@/assets/icons/meal.png";
 import eventsIcon from "@/assets/icons/events.png";
 import communityIcon from "@/assets/icons/community.png";
 
-export default () => {
+export default function CommunityPage() {
   return (
     <>
       <header className={classes.header}>
@@ -37,4 +37,4 @@ export default () => {
       </main>
     </>
   );
-};
+}

@@ -6,7 +6,13 @@ import styles from "./meal-item.module.css";
 
 export interface Props extends IMeal {}
 
-export default ({ title, slug, image, summary, creator }: Props) => {
+export default function MealsGridItem({
+  title,
+  slug,
+  image,
+  summary,
+  creator,
+}: Props) {
   return (
     <article className={styles.meal}>
       <header>
@@ -27,4 +33,4 @@ export default ({ title, slug, image, summary, creator }: Props) => {
       </div>
     </article>
   );
-};
+}

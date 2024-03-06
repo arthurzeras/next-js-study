@@ -10,7 +10,7 @@ async function Meals() {
   return <MealsGrid meals={meals} />;
 }
 
-export default () => {
+export default function MealsPage() {
   return (
     <>
       <header className={styles.header}>
@@ -35,4 +35,4 @@ export default () => {
       </main>
     </>
   );
-};
+}

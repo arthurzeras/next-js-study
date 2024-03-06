@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 import styles from "./page.module.css";
 
-export default ({ params }: Readonly<{ params: { slug: string } }>) => {
+export default function MealsSlugPage({
+  params,
+}: Readonly<{ params: { slug: string } }>) {
   const meal = getMeal(params.slug);
 
   if (!meal) {
@@ -37,4 +39,4 @@ export default ({ params }: Readonly<{ params: { slug: string } }>) => {
       </main>
     </>
   );
-};
+}

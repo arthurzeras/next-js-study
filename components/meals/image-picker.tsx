@@ -10,7 +10,7 @@ interface Props {
   label: string;
 }
 
-export default ({ label, name }: Props) => {
+export default function ImagePicker({ label, name }: Props) {
   const [previewFile, setPreviewFile] = useState("");
   const inputFile = useRef<HTMLInputElement>(null);
 
@@ -66,4 +66,4 @@ export default ({ label, name }: Props) => {
       </div>
     </div>
   );
-};
+}
