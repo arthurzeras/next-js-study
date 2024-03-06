@@ -1,15 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { IMeal } from "@/types";
 import styles from "./meal-item.module.css";
 
-export interface Props {
-  slug: string;
-  title: string;
-  image: string;
-  summary: string;
-  creator: string;
-}
+export interface Props extends IMeal {}
 
 export default ({ title, slug, image, summary, creator }: Props) => {
   return (

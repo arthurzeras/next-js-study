@@ -1,12 +1,9 @@
+import { IMeal } from "@/types";
+import MealItem from "./meal-item";
 import styles from "./meals-grid.module.css";
-import MealItem, { Props as MealItemProps } from "./meal-item";
-
-interface MealsItems extends MealItemProps {
-  id: number;
-}
 
 interface Props {
-  meals: MealsItems[];
+  meals: IMeal[];
 }
 
 export default ({ meals }: Props) => {
