@@ -12,3 +12,7 @@ export function getMeals() {
     }, 2000);
   });
 }
+
+export function getMeal(slug: string) {
+  return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug) as IMeal;
+}
