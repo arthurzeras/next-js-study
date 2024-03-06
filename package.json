@@ -6,14 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "init-db": "rm -f meals.db && tsc --esModuleInterop initdb.ts && node initdb.js && rm initdb.js"
   },
   "dependencies": {
+    "better-sqlite3": "^9.4.3",
     "next": "14.1.2",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
