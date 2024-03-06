@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 import MainHeader from "@/components/main-header/main-header";
 
 export const metadata: Metadata = {
-  title: 'NextLevel Food',
-  description: 'Delicious meals, shared by a food-loving community.',
+  title: "NextLevel Food",
+  description: "Delicious meals, shared by a food-loving community.",
 };
 
-export default function RootLayout({ children }: Readonly<{
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
@@ -19,11 +21,11 @@ export default function RootLayout({ children }: Readonly<{
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop
                   offset="0%"
-                  style={{ stopColor: '#59453c', stopOpacity: '1' }}
+                  style={{ stopColor: "#59453c", stopOpacity: "1" }}
                 />
                 <stop
                   offset="100%"
-                  style={{ stopColor: '#8f3a09', stopOpacity: '1' }}
+                  style={{ stopColor: "#8f3a09", stopOpacity: "1" }}
                 />
               </linearGradient>
             </defs>
@@ -41,4 +43,3 @@ export default function RootLayout({ children }: Readonly<{
     </html>
   );
 }
-

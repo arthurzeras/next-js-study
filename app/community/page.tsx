@@ -1,3 +1,3 @@
 export default () => {
-  return <h1>Community</h1>
-}
+  return <h1>Community</h1>;
+};
