@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 import { saveMeal } from "./meals";
 import { IMealForm } from "@/types";
@@ -42,5 +43,6 @@ export async function saveMealAction(_: any, formData: FormData) {
   }
 
   await saveMeal(meal as IMealForm);
+  revalidatePath("/meals"); // Remove cache
   redirect("/meals");
 }
