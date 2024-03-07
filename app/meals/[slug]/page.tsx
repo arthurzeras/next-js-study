@@ -4,15 +4,23 @@ import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 import styles from "./page.module.css";
 
-export default function MealsSlugPage({
-  params,
-}: Readonly<{ params: { slug: string } }>) {
+interface PageParams extends Readonly<{ params: { slug: string } }> {}
+
+export async function generateMetadata({ params }: PageParams) {
   const meal = getMeal(params.slug);
 
   if (!meal) {
     notFound();
   }
 
+  return {
+    title: `NextLevel Food - ${meal.title}`,
+    description: meal.summary,
+  };
+}
+
+export default function MealsSlugPage({ params }: PageParams) {
+  const meal = getMeal(params.slug);
   const instructions = meal.instructions.replace(/\n/g, "<br/>");
 
   return (
