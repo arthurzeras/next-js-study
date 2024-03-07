@@ -1,6 +1,7 @@
 import classes from "./page.module.css";
 import { saveMealAction } from "@/lib/actions";
 import ImagePicker from "@/components/meals/image-picker";
+import ShareMealFormSubmit from "@/components/meals/share-meal-form-submit";
 
 export default function MealsSharePage() {
   return (
@@ -44,7 +45,7 @@ export default function MealsSharePage() {
           <ImagePicker label="Your image" name="image" />
 
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <ShareMealFormSubmit />
           </p>
         </form>
       </main>

@@ -1,7 +1,9 @@
 "use server";
 
-import { IMealForm } from "@/types";
+import { redirect } from "next/navigation";
+
 import { saveMeal } from "./meals";
+import { IMealForm } from "@/types";
 
 export async function saveMealAction(formData: FormData) {
   const meal = {
@@ -14,4 +16,5 @@ export async function saveMealAction(formData: FormData) {
   };
 
   await saveMeal(meal as IMealForm);
+  redirect("/meals");
 }

@@ -28,9 +28,8 @@ export async function saveMeal(meal: IMealForm) {
 
   const fileExtension = meal.image.name.split(".").pop();
   const fileName = `uploaded-${meal.slug}-${Date.now()}.${fileExtension}`;
-  const filePath = `public/images/${fileName}`;
 
-  const stream = fs.createWriteStream(filePath);
+  const stream = fs.createWriteStream(`public/images/${fileName}`);
   const imageBuffer = await meal.image.arrayBuffer();
 
   stream.write(Buffer.from(imageBuffer), (error) => {
@@ -46,5 +45,5 @@ export async function saveMeal(meal: IMealForm) {
     VALUES
       (@slug, @title, @image, @summary, @instructions, @creator, @creator_email)
   `,
-  ).run({ ...meal, image: filePath });
+  ).run({ ...meal, image: `/images/${fileName}` });
 }

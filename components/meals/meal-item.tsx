@@ -17,7 +17,13 @@ export default function MealsGridItem({
     <article className={styles.meal}>
       <header>
         <div className={styles.image}>
-          <Image src={image} alt={title} fill />
+          <Image
+            src={image}
+            alt={title}
+            fill
+            priority
+            sizes="(max-width: 426px) 100vw"
+          />
         </div>
         <div className={styles.headerText}>
           <h2>{title}</h2>
